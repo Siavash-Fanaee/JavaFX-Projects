@@ -1,0 +1,146 @@
+
+/* 
+  Dark grey: #5A5A5A
+  Red Color: #FF4D4D
+  Text and borders Color: #707070
+*/
+
+.root {
+	-fx-font-size: 10pt;
+	-fx-font-family: 'Courier New';
+	-fx-base: #5A5A5A;
+	-fx-background: #5A5A5A;
+	font-size: 10pt;
+	font-family: 'Courier New';
+	background: #5A5A5A;
+}
+
+#borderpane {
+  background-color: #5A5A5A;
+  -fx-background-color: #5A5A5A;
+}
+
+#gridPane {
+  background-color: #5A5A5A;
+  -fx-background-color: #5A5A5A;
+}
+#scene {
+  background-color: #5A5A5A;
+  -fx-background-color: #5A5A5A;
+}
+
+#song {
+  -fx-background-radius: 10;
+  background-color: white;
+  -fx-background-color: white;
+  -fx-text-fill: #3d3d3d;
+  -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.6), 8, 0, 0, 0);
+}
+
+#song:hover {
+  -fx-effect: dropshadow(gaussian , rgba(0,0,0), 8, 0, 0, 0);
+}
+
+#totalTime, #currTime, #lblTrackName {
+  -fx-text-fill: #3d3d3d;
+}
+
+#selector {
+  -fx-border-color: #3d3d3d;
+  border-color: #3d3d3d;
+  -fx-border-radius: 4;
+  border-radius: 4;
+  -fx-background-radius: 4;
+}
+
+.icon-button {
+  -fx-shape: "M440 64H336l-33.6-44.8A48 48 0 0 0 264 0h-80a48 48 0 0 0-38.4 19.2L112 64H8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h18.9l33.2 372.3a48 48 0 0 0 47.8 43.7h232.2a48 48 0 0 0 47.8-43.7L421.1 96H440a8 8 0 0 0 8-8V72a8 8 0 0 0-8-8zM171.2 38.4A16.1 16.1 0 0 1 184 32h80a16.1 16.1 0 0 1 12.8 6.4L296 64H152zm184.8 427a15.91 15.91 0 0 1-15.9 14.6H107.9A15.91 15.91 0 0 1 92 465.4L59 96h330z";
+}
+
+.button {
+  -fx-background-radius: 50;
+  -fx-background-color: transparent;
+  background-color: transparent;
+  -fx-text-fill: #3d3d3d;
+  -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.6), 8, 0, 0, 0);
+}
+.button:disabled {
+  -fx-opacity: 0.5;
+  opacity: 0.5;
+}
+.button:hover {
+  -fx-background-radius: 50%;
+  -fx-opacity: 1;
+  opacity: 1;
+}
+
+.check-box {
+  /* default properties */
+  -fx-opacity: 1;
+  opacity: 1;
+  -fx-border-radius: 4;
+  border-radius: 4;
+  -fx-background-radius: 4;
+  selected-box-color: white;
+  box-color: white;
+  mark-color: #FF4D4D;
+}
+.check-box:selected > .box {
+  /* background color for selected checkbox */
+  -fx-background-color: selected-box-color;
+  background-color: selected-box-color;
+}
+.check-box > .box {
+  /* background color of unselected checkbox */
+  -fx-background-color: box-color;
+  background-color: box-color;
+}
+.check-box:selected > .box > .mark{
+  -fx-shape: "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z";
+  -fx-background-color: mark-color;
+  background-color: mark-color;
+}
+.check-box:indeterminate  > .box > .mark {
+  /* modify mark color */
+  -fx-background-color: mark-color;
+  background-color: mark-color;
+}
+.check-box:disabled {
+  -fx-opacity: 0.5;
+  opacity: 0.5;
+}
+
+/* Slider CSS */
+.slider {
+  -progress-track: linear-gradient(to right, #FF4D4D 0%, #FFFFFF 0%);
+  -fx-orientation: horizontal;
+  orientation: horizontal;
+  -show-value-on-interaction: true;
+}
+.slider .thumb {
+  -fx-background-color: white;
+  background-color: white;
+  -fx-border-color: #272727;
+  border-color: #272727;
+  -fx-border-radius: 50;
+  border-radius: 50;
+  -fx-border: 0.5px;
+  border: 0.5px;
+}
+.slider .track {
+  /**  */
+  -fx-border-color: #868686;
+  border-color: #868686;
+  -fx-border-radius: 50%;
+  border-radius: 50%;
+  -fx-background-color: -progress-track;
+  background-color: -progress-track;
+
+}
+.slider:disabled {
+  -fx-opacity: 0.5;
+  opacity: 0.5;
+}
+#volume .thumb {
+  -fx-background-image :url("./Assets/volume.png");  
+}
